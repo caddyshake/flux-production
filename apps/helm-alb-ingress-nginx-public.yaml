@@ -6,7 +6,7 @@ metadata:
   namespace: flux-system
 spec:
   releaseName: alb-ingress-nginx-public
-  targetNamespace: alb-ingress-nginx-public
+  targetNamespace: production
   upgrade:
     preserveValues: false
   install:
@@ -128,7 +128,7 @@ apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: aws-alb-ingress-controller-public
-  namespace: alb-ingress-nginx-public
+  namespace: production
   annotations:
     kubernetes.io/ingress.class: "alb"
     alb.ingress.kubernetes.io/scheme: "internet-facing"
